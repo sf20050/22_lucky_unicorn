@@ -1,22 +1,21 @@
-def yes_no(question):
-    valid =False
-    while not valid:
-        response = input(question).lower()
+# ask user if played before
+show_instructions = ""
+while show_instructions != "xxx":
+    show_instructions = input("Have you played this game before? ").lower()
 
-        if response == 'yes' or response == 'y':
-            response = "yes"
-            return response
+    # set up loop to force valid input
 
-        elif response == 'no' or response == 'n':
-            response = "no"
-            return response
+    # if answer is yes program continues
+    if show_instructions == "yes" or show_instructions == "y":
+        print("program continues")
 
-        else:
-            print("Please answer yes / no")
+    # display instructions if answer is no
+    elif show_instructions == "no" or show_instructions == "y":
+        print("display instructions")
+
+    else:
+        print("please answer yes / no")
+
+    print("you chose {}".format(show_instructions))
 
 
-# main route
-show_instructions = yes_no("Have you play this game before? ")
-print("you chose {}".format(show_instructions))
-having_fun = yes_no("Are you having fun? ")
-print("you said {} to having fun".format(having_fun))
