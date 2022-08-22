@@ -127,7 +127,7 @@ while play_again == "":
     # The token is either a horse or zebra...
     # in both cases, subtract $0.50 from the balance
     else:
-        # if the number is even set the chosen to horse
+        # if the number is even set what user chosen to horse
         if chosen_num % 2 == 0:
             prize_decoration = "H"
             chosen = "horse"
